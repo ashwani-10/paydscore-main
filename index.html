@@ -131,6 +131,36 @@
             color: var(--title-color);
         }
 
+        .cta-section {
+            background: #fdfdfd;
+            border: 1px solid #edf2f7;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 40px;
+            transition: transform 0.2s;
+        }
+
+        .cta-section:hover {
+            transform: translateY(-2px);
+        }
+
+        .cta-text {
+            font-size: 15px !important;
+            margin-bottom: 0 !important;
+            color: var(--title-color) !important;
+            font-weight: 500 !important;
+        }
+
+        .cta-link {
+            color: var(--accent-green);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .cta-link:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 480px) {
             .card {
                 padding: 40px 24px;
@@ -158,6 +188,11 @@
 
         <p>Welcome to the next generation of payment reliability & payment trust scoring. Our platform is under
             development and launch is imminent! Watch this space for updates.</p>
+
+        <div class="cta-section">
+            <p class="cta-text">Want to tell us about your story? <br> Fill your claim at <a
+                    href="https://claims.paydscore.com" class="cta-link">claims.paydscore.com</a></p>
+        </div>
 
         <div class="footer">
             <div class="check-box">
