@@ -1,6 +1,6 @@
 import './LandingPage.css';
 
-const LandingPage: React.FC = () => {
+const LandingPage = () => {
     return (
         <div className="landing-body">
             <div className="landing-card">
