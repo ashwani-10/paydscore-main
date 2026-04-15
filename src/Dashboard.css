@@ -459,3 +459,103 @@
         font-size: 36px;
     }
 }
+
+/* ─── How It Works Visual Flow ────────────────────────────────────────────── */
+.pd-hiw-flow {
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr 48px 1fr;
+    align-items: center;
+    gap: 0;
+    margin-top: 40px;
+}
+
+.pd-hiw-card {
+    border-radius: 28px;
+    padding: 36px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pd-hiw-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 48px rgba(0,0,0,0.08);
+}
+
+.pd-hiw-green  { background: #ECFDF5; border: 1px solid rgba(16,185,129,0.2); }
+.pd-hiw-blue   { background: #EFF6FF; border: 1px solid rgba(59,130,246,0.2); }
+.pd-hiw-purple { background: #F5F3FF; border: 1px solid rgba(139,92,246,0.2); }
+
+.pd-hiw-icon-wrap {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+.pd-hiw-icon-green  { background: #D1FAE5; }
+.pd-hiw-icon-blue   { background: #DBEAFE; }
+.pd-hiw-icon-purple { background: #EDE9FE; }
+
+.pd-hiw-step-num {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    opacity: 0.6;
+}
+
+.pd-hiw-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: #152238;
+    line-height: 1.25;
+}
+
+.pd-hiw-badge {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 20px;
+    letter-spacing: 0.02em;
+}
+
+.pd-hiw-hint {
+    font-size: 13px;
+    line-height: 1.55;
+    font-weight: 500;
+    max-width: 200px;
+}
+
+.pd-hiw-desc {
+    font-size: 13.5px;
+    color: #475569;
+    line-height: 1.65;
+    margin: 0;
+    text-align: left;
+    padding-left: 12px;
+    border-left: 2px solid currentColor;
+    width: 100%;
+}
+
+.pd-hiw-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 860px) {
+    .pd-hiw-flow {
+        grid-template-columns: 1fr;
+    }
+    .pd-hiw-arrow {
+        display: none;
+    }
+    .pd-hiw-hint {
+        max-width: 100%;
+    }
+}
