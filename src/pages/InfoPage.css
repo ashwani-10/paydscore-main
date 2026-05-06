@@ -1,0 +1,458 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   PAYDSCORE INFO PAGES — Shared Styles
+   Used by: AboutPage, HowItWorksPage, IntelPage
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.ip-page {
+  min-height: 100vh;
+  background: #FFFFFF;
+  color: #1C2C4A;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+/* ─── Hero Sections ──────────────────────────────────────────────────────── */
+.ip-hero {
+  padding: 160px 48px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ip-hero-inner {
+  max-width: 800px;
+}
+
+.ip-coming-hero {
+  padding: 160px 48px 100px;
+  background: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.ip-h1 {
+  font-size: clamp(32px, 6vw, 64px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  color: #1C2C4A;
+  margin-bottom: 24px;
+}
+
+.ip-h1 em {
+  font-style: normal;
+  color: #38b38e;
+}
+
+.ip-hero-sub {
+  font-size: 20px;
+  color: #4A5568;
+  line-height: 1.7;
+  max-width: 680px;
+}
+
+/* ─── Section Layouts ────────────────────────────────────────────────────── */
+.ip-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 48px;
+}
+
+.ip-section-wide {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 48px;
+}
+
+.ip-band {
+  background: #F8FAFC;
+  border-top: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.ip-band-green {
+  background: #F0FDF4;
+  border-top: 1px solid #DCFCE7;
+  border-bottom: 1px solid #DCFCE7;
+}
+
+/* ─── Typography & Elements ──────────────────────────────────────────────── */
+.ip-eyebrow {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #38b38e;
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ip-eyebrow-dark {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #64748B;
+  margin-bottom: 16px;
+}
+
+.ip-h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.ip-h2 em {
+  font-style: normal;
+  color: #38b38e;
+}
+
+.ip-lead {
+  font-size: 18px;
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 48px;
+}
+
+/* ─── Components ─────────────────────────────────────────────────────────── */
+.ip-value-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.ip-value-item {
+  display: flex;
+  gap: 20px;
+}
+
+.ip-value-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ip-value-icon.green { background: #DCFCE7; }
+.ip-value-icon.blue { background: #DBEAFE; }
+.ip-value-icon.amber { background: #FEF3C7; }
+.ip-value-icon.purple { background: #F3E8FF; }
+
+.ip-value-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.ip-value-body {
+  font-size: 15px;
+  color: #64748B;
+  line-height: 1.6;
+}
+
+/* Steps (How It Works) */
+.ip-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.ip-step {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  padding: 40px;
+  border-radius: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.ip-step-num {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 60px;
+  font-weight: 900;
+  color: #1C2C4A;
+  opacity: 0.05;
+}
+
+.ip-step-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.ip-step-icon.green { background: #DCFCE7; }
+.ip-step-icon.blue { background: #DBEAFE; }
+.ip-step-icon.amber { background: #FEF3C7; }
+
+.ip-step-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.ip-step-body {
+  font-size: 15px;
+  color: #64748B;
+  margin-bottom: 24px;
+}
+
+.ip-step-gate {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ip-step-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ip-step-detail-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748B;
+}
+
+.ip-step-detail-list li::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #CBD5E1;
+}
+
+/* FAQ */
+.ip-faq {
+  margin-top: 48px;
+  border-top: 1px solid #E2E8F0;
+}
+
+.ip-faq-item {
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.ip-faq-q {
+  padding: 24px 0;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ip-faq-chevron {
+  transition: transform 0.3s ease;
+}
+
+.ip-faq-chevron.open {
+  transform: rotate(180deg);
+}
+
+.ip-faq-a {
+  padding-bottom: 24px;
+  color: #64748B;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Intel Cards */
+.ip-intel-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.ip-intel-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.ip-intel-card-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #94A3B8;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.ip-intel-card-value {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.ip-intel-card-ctx {
+  font-size: 13px;
+  color: #64748B;
+}
+
+/* Compliance Card */
+.ip-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.ip-compliance-card {
+  background: #1C2C4A;
+  padding: 40px;
+  border-radius: 32px;
+  color: #FFFFFF;
+}
+
+.ip-compliance-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 32px;
+}
+
+.ip-compliance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ip-compliance-item {
+  display: flex;
+  gap: 16px;
+}
+
+.ip-compliance-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6FEFB3;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.ip-compliance-text {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+}
+
+/* CTA Strip */
+.ip-cta-strip {
+  background: #0E1E36;
+  padding: 80px 48px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.ip-cta-title {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.ip-cta-sub {
+  font-size: 18px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 32px;
+}
+
+/* Buttons */
+.ip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.ip-btn-dark {
+  background: #1C2C4A;
+  color: #FFFFFF;
+}
+
+.ip-btn-dark:hover {
+  background: #243a60;
+  transform: translateY(-2px);
+}
+
+.ip-waitlist-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  padding: 60px;
+  border-radius: 32px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+}
+
+.ip-waitlist-title {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.ip-waitlist-sub {
+  font-size: 18px;
+  color: #64748B;
+}
+
+/* Pullquote */
+.ip-pullquote {
+  margin: 48px 0;
+  padding-left: 32px;
+  border-left: 4px solid #6FEFB3;
+}
+
+.ip-pullquote-text {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #1C2C4A;
+  margin-bottom: 12px;
+}
+
+.ip-pullquote-cite {
+  font-size: 14px;
+  color: #64748B;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ip-steps, .ip-intel-preview-grid, .ip-about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ip-hero, .ip-section, .ip-section-wide, .ip-cta-strip {
+    padding: 100px 24px 60px;
+  }
+  
+  .ip-h1 { font-size: 40px; }
+  .ip-h2 { font-size: 30px; }
+  
+  .ip-waitlist-card { padding: 40px 24px; }
+}
