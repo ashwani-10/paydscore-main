@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, ArrowRight, Shield, Star, Award, Zap } from 'lucide-react';
@@ -15,6 +16,29 @@ const VERTICALS = [
 
 export default function WaitlistPage() {
     const [state, handleSubmit] = useForm(FORMSPREE_ID);
+    const [validationErrors, setValidationErrors] = useState<{name?: string; email?: string}>({});
+
+    const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+        const name = formData.get('name') as string;
+        const email = formData.get('email') as string;
+
+        const errors: {name?: string; email?: string} = {};
+
+        if (name.trim().length < 2) {
+            errors.name = 'Name must be at least 2 characters';
+        }
+
+        // Allowed all emails as requested
+
+        setValidationErrors(errors);
+
+        if (Object.keys(errors).length === 0) {
+            handleSubmit(e);
+        }
+    };
 
     return (
         <div className="min-h-screen bg-[#F8FAFC] flex flex-col">
@@ -105,7 +129,7 @@ export default function WaitlistPage() {
                                             </h1>
                                         </div>
 
-                                        <form onSubmit={handleSubmit} className="space-y-6">
+                                        <form onSubmit={handleFormSubmit} className="space-y-6">
                                             <input type="hidden" name="_subject" value="Paydscore Consolidated Waitlist" />
                                             
                                             <div className="space-y-2">
@@ -118,6 +142,7 @@ export default function WaitlistPage() {
                                                     placeholder="Your name"
                                                     required
                                                 />
+                                                {validationErrors.name && <div className="text-rose-500 text-xs ml-1">{validationErrors.name}</div>}
                                                 <ValidationError field="name" prefix="Name" errors={state.errors} className="text-rose-500 text-xs ml-1" />
                                             </div>
 
@@ -131,6 +156,7 @@ export default function WaitlistPage() {
                                                     placeholder="you@agency.com"
                                                     required
                                                 />
+                                                {validationErrors.email && <div className="text-rose-500 text-xs ml-1">{validationErrors.email}</div>}
                                                 <ValidationError field="email" prefix="Email" errors={state.errors} className="text-rose-500 text-xs ml-1" />
                                             </div>
 
