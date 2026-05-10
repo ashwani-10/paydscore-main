@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, ArrowRight, Shield, Star, Award, Zap } from 'lucide-react';
@@ -17,6 +17,27 @@ const VERTICALS = [
 export default function WaitlistPage() {
     const [state, handleSubmit] = useForm(FORMSPREE_ID);
     const [validationErrors, setValidationErrors] = useState<{name?: string; email?: string}>({});
+    const [formDataState, setFormDataState] = useState<{name: string; email: string; company: string; vertical: string} | null>(null);
+    const [apiCalled, setApiCalled] = useState(false);
+
+    useEffect(() => {
+        if (state.succeeded && formDataState && !apiCalled) {
+            setApiCalled(true);
+            fetch('https://api.paydscore.com/api/v1/email/waitlist', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formDataState),
+            })
+            .then(response => {
+                console.log('Waitlist API response status:', response.status);
+            })
+            .catch(error => {
+                console.error('Waitlist API error:', error);
+            });
+        }
+    }, [state.succeeded, formDataState, apiCalled]);
 
     const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -24,6 +45,8 @@ export default function WaitlistPage() {
         const formData = new FormData(form);
         const name = formData.get('name') as string;
         const email = formData.get('email') as string;
+        const company = formData.get('company') as string || '';
+        const vertical = formData.get('vertical') as string || '';
 
         const errors: {name?: string; email?: string} = {};
 
@@ -36,6 +59,7 @@ export default function WaitlistPage() {
         setValidationErrors(errors);
 
         if (Object.keys(errors).length === 0) {
+            setFormDataState({ name, email, company, vertical });
             handleSubmit(e);
         }
     };
