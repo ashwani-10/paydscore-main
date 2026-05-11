@@ -14,7 +14,7 @@ export function SharedFooter() {
                         <Link to="/intel" className="site-footer-link">Intel</Link>
                         <Link to="/terms" className="site-footer-link">Terms of Service</Link>
                         <Link to="/privacy" className="site-footer-link">Privacy Policy</Link>
-                        <a href="mailto:grievance@paydscore.com" className="site-footer-link">
+                        <a href="mailto:grievances@paydscore.com" className="site-footer-link">
                             Grievance Redressal
                         </a>
                     </div>
@@ -24,7 +24,7 @@ export function SharedFooter() {
                 <div style={{ fontSize: '12px', color: '#94A3B8', lineHeight: 1.7 }}>
                     <strong style={{ color: '#64748B' }}>Grievance Officer:</strong> For any concerns regarding content published on the platform, data privacy, or dispute resolution, please contact our Grievance Officer at{' '}
                     <a href="mailto:grievance@paydscore.com" style={{ color: '#64748B', textDecoration: 'underline' }}>
-                        grievance@paydscore.com
+                        grievances@paydscore.com
                     </a>
                     . We are committed to addressing all grievances within 72 hours of receipt, in accordance with the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021.
                 </div>
